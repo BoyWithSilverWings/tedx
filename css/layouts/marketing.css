@@ -113,10 +113,6 @@ a.pure-button-primary {
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
  */
-.header {
-    max-height: 25px;
-    min-height: 10px;
-}
 
 
 .home-menu {
@@ -162,11 +158,11 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: url("./images/mic.jpg");
+    background: url("../../img/mic.jpg");
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
-    width: 100vh;
+    width: 100%;
     height: 88%;
     top: 0;
     left: 0;
