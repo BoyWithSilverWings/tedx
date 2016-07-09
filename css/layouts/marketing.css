@@ -128,6 +128,7 @@ a.pure-button-primary {
     border-bottom: none;
     /* I need a higher z-index here because of the scroll-over effect. */
     z-index: 4;
+	
 }
 
 .home-menu .pure-menu-heading {
