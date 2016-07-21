@@ -3,12 +3,9 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Part of layout portfolio">
+<meta name="description" content="Part of layout">
 
-    <title>TEDx &ndash; Kochi</title>
-
-    
-
+    <title>TEDx &ndash; Willingdon</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
 
@@ -37,7 +34,6 @@
         <link rel="stylesheet" href="css/layouts/marketing.css">
     <!--<![endif]-->
   
-
     <script src="https://use.fontawesome.com/2f5c8a34dd.js"></script>
 
 </head>
@@ -48,12 +44,15 @@
         <!-- <a class="pure-menu-heading" href="">Your Site</a> -->
         <a href="#"><img src="./img/tex.png" alt="TEDx" class="pure-menu-heading" height="50px"></a>
 
-        <ul class="pure-menu-list">
+        <ul class="pure-menu-list" id="topNav">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Speakers</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Venue</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact Us</a></li>
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="toggleFunction()">&#9776;</a>
+            </li>
         </ul>
     </div>
 </div>
@@ -108,12 +107,10 @@
 
         <div class="pure-g">
             <div class="pure-u-1 pure-u-md-2-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.384293639332!2d76.3615905!3d10.0089227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4698685391a0e6a7!2sInfopark!5e0!3m2!1sen!2sin!4v1467881910492" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.384293639332!2d76.3615905!3d10.0089227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4698685391a0e6a7!2sInfopark!5e0!3m2!1sen!2sin!4v1467881910492" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-
-            <div class="l-box-lrg pure-u-3 pure-u-md-2-5">
+            <div class="contact pure-u-1 pure-u-md-3-5">
                 <h4>Contact Us</h4>
-        
                 <i class="fa fa-phone" aria-hidden="true"></i><span>94005666355</span>
                 <i class="fa fa-phone" aria-hidden="true"></i><span>94005666355</span>
                 <br><br>
@@ -157,8 +154,17 @@
 
 </div>
 
-
-
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function toggleFunction() {
+        var x = document.getElementById("topNav");
+        if (x.className === "pure-menu-list") {
+            x.className += " responsive";
+        } else {
+            x.className = "pure-menu-list";
+        }
+    }
+</script>
 
 
 

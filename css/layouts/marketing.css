@@ -43,7 +43,10 @@ a {
     font-size: 12px;
 }
 
-
+.content {
+    margin: 0 auto;
+    padding: 10px;
+}
 
 /*
  * -- LAYOUT STYLES --
@@ -130,11 +133,21 @@ a.pure-button-primary {
     z-index: 4;
 	
 }
-
+ul.pure-menu-list li.icon {display: none;}
 .home-menu .pure-menu-heading {
     color: white;
     font-weight: 400;
     font-size: 120%;
+}
+/* When the screen is less than 610 pixels wide, hide all list items. Show the list item that contains the link to open and close the topnav (li.icon) */
+@media (max-width: 610px) {
+  .pure-menu-item {
+    display: none;
+    }
+  .icon {
+    float: right;
+    display: inline-block;
+  }
 }
 
 .home-menu .pure-menu-selected a {
@@ -150,6 +163,25 @@ a.pure-button-primary {
     border: none;
     color: #AECFE5;
 }
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media (max-width:610px) {
+  ul.pure-menu-list.responsive {position: relative;}
+  ul.pure-menu-list.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.pure-menu-list.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.pure-menu-list.responsive li a {
+    display: block;
+    text-align: left;
+  }
+} 
 
 
 
@@ -245,6 +277,11 @@ a.pure-button-primary {
     color: #aaa;
 }
 
+.contact {
+    display: inline;
+
+}
+
 /* This is the class used for the footer */
 .footer {
     background: #111;
@@ -266,7 +303,7 @@ a.pure-button-primary {
     }
     /* We want to give the content area some more padding */
     .content {
-        padding: 1em;
+        padding: 4em;
     }
 
     /* We can align the menu header to the left, but float the
@@ -298,7 +335,6 @@ a.pure-button-primary {
     /* We remove the border-separator assigned to .l-box-lrg */
     .l-box-lrg {
         border: none;
-        margin-left: 100px;
     }
 
 }
